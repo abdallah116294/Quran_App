@@ -1,16 +1,26 @@
-# quran
+# Quran App
 
-A new Flutter project.
+![App Logo](app_logo.png)
 
-## Getting Started
+The Quran App is a cross-platform mobile application developed using Flutter that provides a modern and user-friendly way to access and engage with the Quran. It offers a range of features to enhance your Quranic experience, including a comprehensive list of Surahs, Ayahs, and a radio station for Quran recitations.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Surahs and Ayahs:** Explore the entire Quran, organized by Surahs and Ayahs. Quickly find and read your favorite verses.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Radios Stations:** Enjoy the melodious recitations of various Quran reciters. Immerse yourself in the spiritual ambiance of the Quran.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Play and Pause:** Control the playback of recitations with ease. Pause, rewind, and play your preferred recitations at your convenience.
+
+## Tech Stack
+
+- **Flutter:** The Quran App is developed using the Flutter framework, allowing it to run seamlessly on both iOS and Android platforms. Flutter provides a powerful and efficient development environment.
+
+## Installation
+
+To use the Quran App, follow these steps:
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/abdallah116294/Quran_App.git
