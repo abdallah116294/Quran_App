@@ -1,7 +1,4 @@
 # Quran App
-
-![App Logo](app_logo.png)
-
 The Quran App is a cross-platform mobile application developed using Flutter that provides a modern and user-friendly way to access and engage with the Quran. It offers a range of features to enhance your Quranic experience, including a comprehensive list of Surahs, Ayahs, and a radio station for Quran recitations.
 
 ## Features
