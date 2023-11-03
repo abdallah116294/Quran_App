@@ -37,8 +37,8 @@ class AyahWidget extends StatelessWidget {
                     onPressed:onPressed2,
                     icon: const Icon(Icons.copy)),
                 Container(
-                  width: 27.h,
-                  height: 27.w,
+                  width: 42.h,
+                  height: 42.w,
                   decoration: ShapeDecoration(
                     color: const Color(0xFF863ED5),
                     shape: RoundedRectangleBorder(
@@ -48,7 +48,7 @@ class AyahWidget extends StatelessWidget {
                   child: Center(
                     child: Text(
                       number.toString(),
-                      style:  TextStyle(color: Colors.white, fontSize: 14.sp),
+                      style:  TextStyle(color: Colors.white, fontSize: 18.sp),
                     ),
                   ),
                 )

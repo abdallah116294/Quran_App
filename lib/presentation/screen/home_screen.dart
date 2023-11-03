@@ -20,28 +20,31 @@ class _HomScreenState extends State<HomScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          title:  Text(
-            "Quran App",
-            style: TextStyle(color:const Color(0xff672CBC), fontSize: 28.sp),
-            textAlign: TextAlign.left,
-          ),
-          elevation: 0.0,
-          backgroundColor: Colors.white,
-          leading: IconButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const Directionality(textDirection: TextDirection.rtl,child: SurahaScreen())));
-              },
-              icon: const Icon(
-                Icons.radio_rounded,
-                color: Color(0xff672CBC),
-              ))
-        ),
+            centerTitle: true,
+            title: Text(
+              "Quran App",
+              style: TextStyle(color: const Color(0xff672CBC), fontSize: 28.sp),
+              textAlign: TextAlign.left,
+            ),
+            elevation: 0.0,
+            backgroundColor: Colors.white,
+            leading: IconButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const Directionality(
+                          textDirection: TextDirection.rtl,
+                          child: SurahaScreen())));
+                },
+                icon: const Icon(
+                  Icons.radio_rounded,
+                  color: Color(0xff672CBC),
+                ))),
         body: Padding(
-          padding:  EdgeInsets.all(8.0.r),
+          padding: EdgeInsets.all(8.0.r),
           child: BlocProvider(
             create: (context) => di.sl<QuranCubit>()..getSurah(),
-            child: BlocBuilder<QuranCubit, QuranState>(builder: (context, state) {
+            child:
+                BlocBuilder<QuranCubit, QuranState>(builder: (context, state) {
               if (state is SurahasStateIsloading) {
                 return const Center(
                   child: CircularProgressIndicator(),
@@ -53,20 +56,22 @@ class _HomScreenState extends State<HomScreen> {
                     itemBuilder: (context, index) {
                       return InkWell(
                           onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => Directionality(
-                                    textDirection: TextDirection.rtl,
-                                    child: AyahsScreen(
-                                      number: state
-                                          .quranEntity2.data![index].number!
-                                          .toInt(),
-                                    ))));
+                            Navigator.of(context)
+                                .push(MaterialPageRoute(
+                                    builder: (context) => Directionality(
+                                        textDirection: TextDirection.rtl,
+                                        child: AyahsScreen(
+                                          number: state
+                                              .quranEntity2.data![index].number!
+                                              .toInt(),
+                                        ))));
                           },
                           child: SurahaItemWidget(
                             englishName: state
                                 .quranEntity2.data![index].englishName
                                 .toString(),
-                            name: state.quranEntity2.data![index].name.toString(),
+                            name:
+                                state.quranEntity2.data![index].name.toString(),
                             number:
                                 state.quranEntity2.data![index].number!.toInt(),
                             numberOfAyahs: state
